@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'master-header',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterHeaderComponent implements OnInit {
 
+  @Input()
+  public tabs: string[] = [];
+
+  @Output()
+  tabSelected: EventEmitter<string> = new EventEmitter();
+
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
+  public selectTab(tabName: string) {
+    this.tabSelected.emit(tabName);
+  }
 }

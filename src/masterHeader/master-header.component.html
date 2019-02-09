@@ -1,3 +1,7 @@
-<p>
-  master-header under work
-</p>
+<section>
+    <ul>
+        <li *ngFor="let tab of tabs">
+          <label (click)="selectTab(tab)">{{tab}}</label>
+        </li>
+    </ul>
+</section>
