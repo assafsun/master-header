@@ -4,4 +4,11 @@
           <label (click)="selectTab(tab)">{{tab}}</label>
         </li>
     </ul>
+    <label class="menu1" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </label>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
 </section>
