@@ -8,15 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   public title = 'master-header';
   public tabs: string[] = [];
+  public menuItems: string[] = [];
 
   public ngOnInit() {
-    this.tabs.push ("Assaf");
-    this.tabs.push ("Moran");
-    this.tabs.push ("Alon");
-    this.tabs.push ("Neta");
+    this.tabs.push ('Action1');
+    this.tabs.push ('Action2');
+    this.tabs.push ('Action3');
+    this.tabs.push ('Action4');
+
+    this.menuItems.push ('Menu Action 1');
+    this.menuItems.push ('Menu Action 2');
+    this.menuItems.push ('Menu Action 3');
   }
 
   public onTabSelected(tab: string) {
-    console.log("Selected tab is " + tab);
+    console.log('Selected tab is ' + tab);
+  }
+
+  public onMenuClicked(menuItem: string) {
+    console.log('Clicked menu: ' + menuItem);
   }
 }

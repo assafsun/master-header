@@ -1,4 +1,6 @@
 <master-header 
     [tabs]="tabs"
-    (tabSelected)="onTabSelected($event)">
+    [menuItems]="menuItems"
+    (tabSelected)="onTabSelected($event)"
+    (menuClicked)="onMenuClicked($event)">
 </master-header>

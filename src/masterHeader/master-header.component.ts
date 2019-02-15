@@ -10,8 +10,14 @@ export class MasterHeaderComponent implements OnInit {
   @Input()
   public tabs: string[] = [];
 
+  @Input()
+  public menuItems: string[] = [];
+
   @Output()
   tabSelected: EventEmitter<string> = new EventEmitter();
+
+  @Output()
+  menuClicked: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
@@ -20,5 +26,9 @@ export class MasterHeaderComponent implements OnInit {
 
   public selectTab(tabName: string) {
     this.tabSelected.emit(tabName);
+  }
+
+  public selectMenuItem(menuItemName: string) {
+    this.menuClicked.emit(menuItemName);
   }
 }
