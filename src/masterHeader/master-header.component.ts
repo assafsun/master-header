@@ -8,6 +8,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class MasterHeaderComponent implements OnInit {
 
   @Input()
+  public name: string = 'My Header';
+
+  @Input()
+  public iconLInk: string = 'https://image.flaticon.com/icons/svg/149/149053.svg';
+
+  @Input()
   public tabs: string[] = [];
 
   @Input()

@@ -1,15 +1,14 @@
 <section class="leftSide">
+    <img src={{iconLInk}}>
+    <label>{{name}}</label>
+    <div class="seperator"></div>
     <ul>
         <li *ngFor="let tab of tabs">
           <label (click)="selectTab(tab)">{{tab}}</label>
         </li>
     </ul>
-
-
 </section>
 <section class="center">
-
-
 </section>
 <section class="rightSide">
   <label class="menu1" mat-icon-button [matMenuTriggerFor]="menu">
